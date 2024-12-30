@@ -1,0 +1,294 @@
+/* General Body Styling */
+body {
+    font-family: "Nunito",serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f8e9ef; 
+}
+
+/* Header Strip */
+.header-strip {
+    background-color: #d7b8c4; 
+    color: #fff;
+    padding: 0 1rem 1.9rem 1rem;
+    margin-top: 0 ;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.header-strip span {
+    position: absolute;
+    animation: scrollText 15s linear infinite;
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(180%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Header */
+header {
+    background-color: #c18f9b; 
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+header .logo img {
+    height: 100px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 1.5rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+    color: #ae5a72;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    background-image: url('background1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 1rem;
+    color: white;
+}
+
+#hero h1 {
+    font-size: 2.8rem;
+    color: #ae5a72; 
+}
+
+.welcome-text {
+    font-family: 'Nunito', serif;
+    font-weight: 900; /* Adjust the weight as needed */
+    font-size: 3em; /* Adjust the size as needed */
+    color: #ae5a72; /* Change the color to match your design */
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Add some space above the text */
+}
+
+#hero p {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: #c18f9b; 
+}
+
+/* Product Section */
+#products {
+    padding: 3rem 1rem;
+    text-align: center;
+    background: #fce4ed; 
+}
+
+#products h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ae5a72;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.product-item {
+    border: 1px solid #e1a3b4;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-item h3 {
+    font-size: 1.2rem;
+    color: #7a3e4b;
+}
+
+.product-item p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 1rem 0;
+}
+
+.product-item .price {
+    font-weight: bold;
+    color: #ae5a72;
+    margin-bottom: 1rem;
+}
+
+.product-item button {
+    background-color: #ae5a72;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.product-item button:hover {
+    background-color: #7a3e4b;
+}
+
+.product-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 0.9rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    #hero {
+        padding: 3rem 1rem;
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo img {
+        height: 60px;
+    }
+
+    header nav ul li {
+        margin: 0 0.5rem;
+    }
+
+    .product-item {
+        padding: 1rem;
+    }
+}
+
+/* Contact Section */
+#contact {
+    padding: 3rem 1rem;
+    background: #f8e9ef;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ae5a72;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact button {
+    padding: 0.8rem 1.5rem;
+    background: #ae5a72;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#contact button:hover {
+    background: #7a3e4b;
+}
+
+/* Back-to-Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ae5a72;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #7a3e4b;
+}
+
+/* Footer */
+footer {
+    background: #c18f9b;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+footer p {
+    font-size: 1.5rem;
+}
+
